@@ -1,7 +1,7 @@
 # Alert RCB for Home Assistant
 
-[![Validate](https://github.com/MatissowyMati/home-assistant-rso/actions/workflows/validate.yml/badge.svg)](https://github.com/MatissowyMati/home-assistant-rso/actions/workflows/validate.yml)
-[![GitHub release](https://img.shields.io/github/v/release/MatissowyMati/home-assistant-rso)](https://github.com/MatissowyMati/home-assistant-rso/releases)
+[![Validate](https://github.com/MatissowyMati/alert-rcb-hass/actions/workflows/validate.yml/badge.svg)](https://github.com/MatissowyMati/alert-rcb-hass/actions/workflows/validate.yml)
+[![GitHub release](https://img.shields.io/github/v/release/MatissowyMati/alert-rcb-hass)](https://github.com/MatissowyMati/alert-rcb-hass/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HACS: Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
 
@@ -49,7 +49,7 @@ Each configured feed creates:
 
 1. Open **HACS → Integrations**.
 2. Open the menu and select **Custom repositories**.
-3. Add `https://github.com/MatissowyMati/home-assistant-rso` with category
+3. Add `https://github.com/MatissowyMati/alert-rcb-hass` with category
    **Integration**.
 4. Install **Alert RCB**.
 5. Restart Home Assistant.

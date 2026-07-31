@@ -22,5 +22,5 @@ class RSOEntity(CoordinatorEntity[RSODataUpdateCoordinator]):
             manufacturer="MatissowyMati",
             model="Alert RCB",
             name=coordinator.entry.title,
-            configuration_url="https://github.com/MatissowyMati/home-assistant-rso",
+            configuration_url="https://github.com/MatissowyMati/alert-rcb-hass",
         )

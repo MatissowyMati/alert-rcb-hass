@@ -4,10 +4,10 @@
   "codeowners": ["@MatissowyMati"],
   "config_flow": true,
   "dependencies": ["persistent_notification"],
-  "documentation": "https://github.com/MatissowyMati/home-assistant-rso",
+  "documentation": "https://github.com/MatissowyMati/alert-rcb-hass",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/MatissowyMati/home-assistant-rso/issues",
+  "issue_tracker": "https://github.com/MatissowyMati/alert-rcb-hass/issues",
   "requirements": [],
-  "version": "1.1.0"
+  "version": "1.1.1"
 }
