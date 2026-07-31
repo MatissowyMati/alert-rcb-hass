@@ -4,7 +4,9 @@ import sys
 from pathlib import Path
 from types import ModuleType
 
-if "custom_components.rso" not in sys.modules:
-    package = ModuleType("custom_components.rso")
-    package.__path__ = [str(Path(__file__).parents[1] / "custom_components" / "rso")]
-    sys.modules["custom_components.rso"] = package
+if "custom_components.alert_rcb" not in sys.modules:
+    package = ModuleType("custom_components.alert_rcb")
+    package.__path__ = [
+        str(Path(__file__).parents[1] / "custom_components" / "alert_rcb")
+    ]
+    sys.modules["custom_components.alert_rcb"] = package

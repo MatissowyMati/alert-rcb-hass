@@ -1,8 +1,8 @@
 {
   "config": {
-    "abort": {"already_configured": "This RSO feed is already configured."},
-    "error": {"cannot_connect": "Cannot connect to the RSO service."},
-    "step": {"user": {"data": {"category": "Category", "name": "Name", "notification_mode": "Persistent notifications", "province": "Province", "scan_interval": "Polling interval"}, "description": "Choose the public RSO feed to monitor."}}
+    "abort": {"already_configured": "This Alert RCB feed is already configured."},
+    "error": {"cannot_connect": "Cannot connect to the Alert RCB data service."},
+    "step": {"user": {"data": {"category": "Category", "name": "Name", "notification_mode": "Persistent notifications", "province": "Province", "scan_interval": "Polling interval"}, "description": "Choose the public warning feed for Alert RCB to monitor."}}
   },
   "options": {"step": {"init": {"data": {"notification_mode": "Persistent notifications", "scan_interval": "Polling interval"}}}},
   "entity": {

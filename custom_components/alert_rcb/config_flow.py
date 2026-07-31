@@ -64,7 +64,7 @@ class RSOConfigFlow(ConfigFlow, domain=DOMAIN):
             except RSOApiError:
                 errors["base"] = "cannot_connect"
             else:
-                title = user_input.pop(CONF_NAME) or f"RSO {PROVINCES[province]}"
+                title = user_input.pop(CONF_NAME) or f"Alert RCB {PROVINCES[province]}"
                 options = {
                     CONF_SCAN_INTERVAL: user_input.pop(CONF_SCAN_INTERVAL),
                     CONF_NOTIFICATION_MODE: user_input.pop(CONF_NOTIFICATION_MODE),
@@ -75,7 +75,7 @@ class RSOConfigFlow(ConfigFlow, domain=DOMAIN):
 
         schema = vol.Schema(
             {
-                vol.Optional(CONF_NAME, default="RSO"): str,
+                vol.Optional(CONF_NAME, default="Alert RCB"): str,
                 vol.Required(CONF_PROVINCE, default=DEFAULT_PROVINCE): _select(
                     PROVINCES
                 ),

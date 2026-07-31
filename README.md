@@ -1,14 +1,14 @@
-# Regionalny System Ostrzegania (RSO) for Home Assistant
+# Alert RCB for Home Assistant
 
 [![Validate](https://github.com/MatissowyMati/home-assistant-rso/actions/workflows/validate.yml/badge.svg)](https://github.com/MatissowyMati/home-assistant-rso/actions/workflows/validate.yml)
 [![GitHub release](https://img.shields.io/github/v/release/MatissowyMati/home-assistant-rso)](https://github.com/MatissowyMati/home-assistant-rso/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HACS: Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
 
-A modern Home Assistant integration for Poland's public **Regionalny System
-Ostrzegania** warning feed. It continuously monitors official RSO messages and
-makes them available to dashboards, calendars, automations, and mobile
-notifications.
+**Alert RCB** is a modern Home Assistant integration for Poland's public
+Regionalny System Ostrzegania warning feed. It continuously monitors official
+RSO messages and makes them available to dashboards, calendars, automations,
+and mobile notifications without conflicting with integrations named RSO.
 
 The integration uses the public JSON interface documented by
 [TVP's RSO integration guide](https://komunikaty.tvp.pl/Info/Integration).
@@ -20,7 +20,7 @@ The integration uses the public JSON interface documented by
 | Fast polling | Checks RSO every minute by default; configurable from 1 to 1440 minutes during setup or later. |
 | Regional filtering | Monitor all of Poland or a selected voivodeship. |
 | Category filtering | All, general, meteorological, hydrological, road, or water-level messages. |
-| Immediate events | Emits an event entity update and `rso_new_alert` / `rso_updated_alert` bus events. |
+| Immediate events | Emits an event entity update and `alert_rcb_new_alert` / `alert_rcb_updated_alert` bus events. |
 | Notifications | Optional persistent notifications for critical alerts or every feed update. |
 | Live calendar | Displays alert validity periods in a Home Assistant calendar. |
 | Dashboard entities | Active-alert count, latest alert, critical-alert binary sensor, and manual refresh button. |
@@ -51,19 +51,19 @@ Each configured feed creates:
 2. Open the menu and select **Custom repositories**.
 3. Add `https://github.com/MatissowyMati/home-assistant-rso` with category
    **Integration**.
-4. Install **Regionalny System Ostrzegania (RSO)**.
+4. Install **Alert RCB**.
 5. Restart Home Assistant.
 
 ### Manual installation
 
-Copy `custom_components/rso` into the `custom_components` directory under your
-Home Assistant configuration directory, then restart Home Assistant.
+Copy `custom_components/alert_rcb` into the `custom_components` directory under
+your Home Assistant configuration directory, then restart Home Assistant.
 
 ## Configuration
 
 1. Open **Settings → Devices & services**.
 2. Select **Add integration**.
-3. Search for **Regionalny System Ostrzegania**.
+3. Search for **Alert RCB**.
 4. Choose a feed name, province, category, polling interval, and notification
    mode.
 
@@ -88,11 +88,11 @@ Assistant Companion App device:
 
 ```yaml
 automation:
-  - alias: "RSO critical mobile alert"
+  - alias: "Alert RCB critical mobile alert"
     mode: queued
     triggers:
       - trigger: state
-        entity_id: event.rso_alert_event
+        entity_id: event.alert_rcb_alert_event
     conditions:
       - condition: template
         value_template: >-
@@ -100,11 +100,11 @@ automation:
     actions:
       - action: notify.mobile_app_your_phone
         data:
-          title: "RSO: {{ trigger.to_state.attributes.title }}"
+          title: "Alert RCB: {{ trigger.to_state.attributes.title }}"
           message: "{{ trigger.to_state.attributes.summary }}"
           data:
             url: "{{ trigger.to_state.attributes.url }}"
-            tag: "rso-{{ trigger.to_state.attributes.id }}"
+            tag: "alert-rcb-{{ trigger.to_state.attributes.id }}"
             ttl: 0
             priority: high
 ```
@@ -114,7 +114,7 @@ Automations can also trigger directly on the Home Assistant event bus:
 ```yaml
 triggers:
   - trigger: event
-    event_type: rso_new_alert
+    event_type: alert_rcb_new_alert
 ```
 
 Both bus events contain the normalized alert payload:
@@ -135,6 +135,12 @@ providing the lowest practical notification latency.
 RSO also advertises CAP/OpenAPI access, but TVP requires an administrator-issued
 access token. This integration therefore uses the documented public JSON feed
 and does not request or store RSO credentials.
+
+The integration uses the logo from the
+[official RSO application](https://apps.apple.com/pl/app/regionalny-system-ostrzegania/id1326612339).
+The Home Assistant service device is identified as **Alert RCB**, manufactured
+by **MatissowyMati**, and its configuration link points to this GitHub
+repository.
 
 > [!IMPORTANT]
 > This community project is not affiliated with or endorsed by TVP or Polish

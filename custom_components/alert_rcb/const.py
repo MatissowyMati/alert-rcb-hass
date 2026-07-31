@@ -2,7 +2,7 @@
 
 from typing import Final
 
-DOMAIN: Final = "rso"
+DOMAIN: Final = "alert_rcb"
 PLATFORMS: Final = ["binary_sensor", "button", "calendar", "event", "sensor"]
 
 API_BASE_URL: Final = "https://komunikaty.tvp.pl"
@@ -22,8 +22,8 @@ MIN_SCAN_INTERVAL: Final = 1
 MAX_SCAN_INTERVAL: Final = 1440
 
 NOTIFICATION_MODES: Final = ["none", "critical", "all"]
-EVENT_NEW_ALERT: Final = "rso_new_alert"
-EVENT_UPDATED_ALERT: Final = "rso_updated_alert"
+EVENT_NEW_ALERT: Final = "alert_rcb_new_alert"
+EVENT_UPDATED_ALERT: Final = "alert_rcb_updated_alert"
 SIGNAL_ALERT: Final = f"{DOMAIN}_alert"
 
 PROVINCES: Final = {

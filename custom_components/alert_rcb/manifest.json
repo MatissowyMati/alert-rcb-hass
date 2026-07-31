@@ -1,6 +1,6 @@
 {
-  "domain": "rso",
-  "name": "Regionalny System Ostrzegania (RSO)",
+  "domain": "alert_rcb",
+  "name": "Alert RCB",
   "codeowners": ["@MatissowyMati"],
   "config_flow": true,
   "dependencies": ["persistent_notification"],
@@ -9,5 +9,5 @@
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/MatissowyMati/home-assistant-rso/issues",
   "requirements": [],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }

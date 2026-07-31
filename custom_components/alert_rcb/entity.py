@@ -19,8 +19,8 @@ class RSOEntity(CoordinatorEntity[RSODataUpdateCoordinator]):
         self._attr_device_info = DeviceInfo(
             identifiers={(DOMAIN, coordinator.entry.entry_id)},
             entry_type=DeviceEntryType.SERVICE,
-            manufacturer="Telewizja Polska",
-            model="Regionalny System Ostrzegania",
+            manufacturer="MatissowyMati",
+            model="Alert RCB",
             name=coordinator.entry.title,
-            configuration_url="https://komunikaty.tvp.pl/",
+            configuration_url="https://github.com/MatissowyMati/home-assistant-rso",
         )

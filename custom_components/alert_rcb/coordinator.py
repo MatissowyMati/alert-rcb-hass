@@ -44,7 +44,7 @@ class RSODataUpdateCoordinator(DataUpdateCoordinator[RSOFeed]):
             hass,
             _LOGGER,
             config_entry=entry,
-            name=f"RSO {entry.title}",
+            name=f"Alert RCB {entry.title}",
             update_interval=timedelta(minutes=minutes),
             always_update=False,
         )
@@ -105,9 +105,10 @@ class RSODataUpdateCoordinator(DataUpdateCoordinator[RSOFeed]):
         async_create(
             self.hass,
             f"{alert.shortcut or alert.content}\n\nRegion: {provinces}\n"
-            f"Ważne do: {alert.valid_to.isoformat()}\n\n[Otwórz RSO]({alert.url})",
-            title=f"{prefix} komunikat RSO: {alert.title}",
-            notification_id=f"rso_{self.entry.entry_id}_{alert.id}",
+            f"Ważne do: {alert.valid_to.isoformat()}\n\n"
+            f"[Otwórz komunikat]({alert.url})",
+            title=f"{prefix} Alert RCB: {alert.title}",
+            notification_id=f"alert_rcb_{self.entry.entry_id}_{alert.id}",
         )
 
     @callback

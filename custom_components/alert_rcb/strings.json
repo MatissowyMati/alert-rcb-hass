@@ -1,7 +1,7 @@
 {
   "config": {
-    "abort": {"already_configured": "This RSO feed is already configured."},
-    "error": {"cannot_connect": "Cannot connect to the RSO service."},
+    "abort": {"already_configured": "This Alert RCB feed is already configured."},
+    "error": {"cannot_connect": "Cannot connect to the Alert RCB data service."},
     "step": {
       "user": {
         "data": {"category": "Category", "name": "Name", "notification_mode": "Persistent notifications", "province": "Province", "scan_interval": "Polling interval"},
@@ -12,7 +12,7 @@
           "province": "Province to monitor, or all of Poland.",
           "scan_interval": "How often to check RSO, in minutes."
         },
-        "description": "Choose the public RSO feed to monitor."
+        "description": "Choose the public warning feed for Alert RCB to monitor."
       }
     }
   },

@@ -1,6 +1,6 @@
 """Tests for RSO response parsing."""
 
-from custom_components.rso.api import parse_alert
+from custom_components.alert_rcb.api import parse_alert
 
 
 def test_parse_alert() -> None:
