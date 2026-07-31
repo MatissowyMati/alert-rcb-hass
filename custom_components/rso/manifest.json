@@ -1,0 +1,14 @@
+{
+  "codeowners": ["@MatissowyMati"],
+  "config_flow": true,
+  "dependencies": ["persistent_notification"],
+  "documentation": "https://github.com/MatissowyMati/home-assistant-rso",
+  "domain": "rso",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/MatissowyMati/home-assistant-rso/issues",
+  "name": "Regionalny System Ostrzegania (RSO)",
+  "requirements": [],
+  "version": "1.0.0"
+}
+

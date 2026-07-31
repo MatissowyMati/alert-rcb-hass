@@ -1,0 +1,15 @@
+{
+  "config": {
+    "abort": {"already_configured": "Ten kanał RSO jest już skonfigurowany."},
+    "error": {"cannot_connect": "Nie można połączyć się z serwisem RSO."},
+    "step": {"user": {"data": {"category": "Kategoria", "name": "Nazwa", "notification_mode": "Powiadomienia trwałe", "province": "Województwo", "scan_interval": "Interwał odpytywania"}, "description": "Wybierz publiczny kanał RSO do monitorowania."}}
+  },
+  "options": {"step": {"init": {"data": {"notification_mode": "Powiadomienia trwałe", "scan_interval": "Interwał odpytywania"}}}},
+  "entity": {
+    "binary_sensor": {"critical_alert": {"name": "Alert alarmowy"}},
+    "button": {"refresh": {"name": "Odśwież kanał"}},
+    "calendar": {"alerts_calendar": {"name": "Komunikaty"}},
+    "event": {"alert_event": {"name": "Zdarzenie alertu"}},
+    "sensor": {"active_alerts": {"name": "Aktywne komunikaty"}, "latest_alert": {"name": "Najnowszy komunikat"}}
+  }
+}

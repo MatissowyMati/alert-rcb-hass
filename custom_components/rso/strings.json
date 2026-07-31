@@ -1,0 +1,40 @@
+{
+  "config": {
+    "abort": {"already_configured": "This RSO feed is already configured."},
+    "error": {"cannot_connect": "Cannot connect to the RSO service."},
+    "step": {
+      "user": {
+        "data": {"category": "Category", "name": "Name", "notification_mode": "Persistent notifications", "province": "Province", "scan_interval": "Polling interval"},
+        "data_description": {
+          "category": "RSO alert category to monitor.",
+          "name": "Name shown for this feed in Home Assistant.",
+          "notification_mode": "none: no built-in notification; critical: only alerts marked for alarm distribution; all: every new or updated alert.",
+          "province": "Province to monitor, or all of Poland.",
+          "scan_interval": "How often to check RSO, in minutes."
+        },
+        "description": "Choose the public RSO feed to monitor."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {"notification_mode": "Persistent notifications", "scan_interval": "Polling interval"},
+        "data_description": {
+          "notification_mode": "none: no built-in notification; critical: only alerts marked for alarm distribution; all: every new or updated alert.",
+          "scan_interval": "How often to check RSO, in minutes."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {"critical_alert": {"name": "Critical alert"}},
+    "button": {"refresh": {"name": "Refresh feed"}},
+    "calendar": {"alerts_calendar": {"name": "Alerts"}},
+    "event": {"alert_event": {"name": "Alert event"}},
+    "sensor": {
+      "active_alerts": {"name": "Active alerts"},
+      "latest_alert": {"name": "Latest alert"}
+    }
+  }
+}

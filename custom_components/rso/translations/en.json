@@ -1,0 +1,15 @@
+{
+  "config": {
+    "abort": {"already_configured": "This RSO feed is already configured."},
+    "error": {"cannot_connect": "Cannot connect to the RSO service."},
+    "step": {"user": {"data": {"category": "Category", "name": "Name", "notification_mode": "Persistent notifications", "province": "Province", "scan_interval": "Polling interval"}, "description": "Choose the public RSO feed to monitor."}}
+  },
+  "options": {"step": {"init": {"data": {"notification_mode": "Persistent notifications", "scan_interval": "Polling interval"}}}},
+  "entity": {
+    "binary_sensor": {"critical_alert": {"name": "Critical alert"}},
+    "button": {"refresh": {"name": "Refresh feed"}},
+    "calendar": {"alerts_calendar": {"name": "Alerts"}},
+    "event": {"alert_event": {"name": "Alert event"}},
+    "sensor": {"active_alerts": {"name": "Active alerts"}, "latest_alert": {"name": "Latest alert"}}
+  }
+}
