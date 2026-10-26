@@ -101,13 +101,16 @@ automation:
       - action: notify.mobile_app_your_phone
         data:
           title: "Alert RCB: {{ trigger.to_state.attributes.title }}"
-          message: "{{ trigger.to_state.attributes.summary }}"
+          message: "{{ trigger.to_state.attributes.description }}"
           data:
             url: "{{ trigger.to_state.attributes.url }}"
             tag: "alert-rcb-{{ trigger.to_state.attributes.id }}"
             ttl: 0
             priority: high
 ```
+
+Use `description` for the full alert text; `summary` may contain only a short
+label such as "Alert RCB".
 
 Automations can also trigger directly on the Home Assistant event bus:
 
